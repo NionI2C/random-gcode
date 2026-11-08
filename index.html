@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="สุ่มแสดงชุดคำสั่ง G-code">
+  <meta name="theme-color" content="#101923">
+  <title>สุ่ม G-code</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="dataset.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="screen">
+    <button id="start-button" class="start-button" type="button" aria-label="เริ่มสุ่ม G-code">
+      <span class="button-icon" aria-hidden="true">⤨</span>
+      <span>สุ่ม G-code</span>
+    </button>
+    <pre id="gcode" class="gcode" aria-live="off" aria-label="G-code ที่สุ่มได้" hidden></pre>
+    <p id="error-state" class="error-state" hidden></p>
+  </main>
+</body>
+</html>

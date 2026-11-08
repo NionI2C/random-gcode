@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  color-scheme: dark;
+  font-family: 'DM Mono', Consolas, monospace;
+  color: #d8f3c3;
+  background: #101923;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; min-width: 320px; min-height: 100%; margin: 0; }
+body { min-height: 100vh; min-height: 100svh; background: radial-gradient(ellipse at 50% 48%, #1e303b 0, #101923 68%); }
+.screen { position: relative; display: grid; width: 100%; min-height: 100vh; min-height: 100svh; place-items: center; padding: 50px clamp(18px, 5vw, 72px); overflow: hidden; }
+[hidden] { display: none !important; }
+.start-button { display: flex; min-width: 220px; min-height: 76px; align-items: center; justify-content: center; gap: 13px; padding: 16px 28px; border: 1px solid #c7f3a28a; border-radius: 16px; background: linear-gradient(145deg, #d7ffb8, #a8e87b); color: #142019; box-shadow: 0 12px 50px #a8e87b35, inset 0 1px #ffffffa0; font: 500 20px 'DM Mono', Consolas, monospace; cursor: pointer; transition: transform .18s ease, box-shadow .18s ease, filter .18s ease; }
+.start-button:hover { transform: translateY(-3px) scale(1.025); box-shadow: 0 16px 60px #a8e87b55, inset 0 1px #ffffffa0; filter: brightness(1.04); }
+.start-button:active { transform: translateY(0) scale(.99); }
+.start-button:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
+.button-icon { font-size: 27px; line-height: 1; }
+.gcode { width: 100%; max-width: 1500px; margin: 0; color: #d8f3c3; font: 500 clamp(25px, 6.2vw, 86px)/1.55 'DM Mono', Consolas, monospace; letter-spacing: -.045em; text-align: center; white-space: pre-wrap; overflow-wrap: anywhere; text-shadow: 0 0 42px #b8f28b26; transition: opacity .12s ease, transform .12s ease, filter .12s ease; }
+.gcode.is-spinning { opacity: .82; transform: scale(.985); filter: blur(.15px); }
+.error-state { max-width: 640px; margin: 0; color: #ffc1ae; font: 16px/1.7 'DM Mono', Consolas, monospace; text-align: center; }
+
+@media (max-width: 600px) {
+  .gcode { font-size: clamp(22px, 7vw, 38px); }
+  .start-button { min-width: 195px; min-height: 68px; font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
